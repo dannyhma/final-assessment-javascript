@@ -2,7 +2,7 @@ import {describe, test} from 'node:test';
 import assert from 'node:assert';
 import sum from './index.js';
 
-describe('Calculator', () => {
+describe('Sum', () => {
   test('correctly calculates the sum of two positive integers', () => {
     // Arrange
     const operandA = 2;
