@@ -4,93 +4,26 @@ import sum from './index.js';
 
 describe('Sum', () => {
   test('correctly calculates the sum of two positive integers', () => {
-    // Arrange
-    const operandA = 2;
-    const operandB = 3;
-
-    // Action
-    const actualValue = sum(operandA, operandB);
-
-    // Assert
-    const expectedValue = 5;
-    assert.equal(actualValue, expectedValue);
+    // Test the addition of two positive numbers
+    assert.equal(sum(2, 3), 5);
   });
 
-  test('returns zero if one operand is negative', () => {
-    // Arrange
-    const operandA = -1;
-    const operandB = 5;
-
-    // Action
-    const actualValue = sum(operandA, operandB);
-
-    // Assert
-    const expectedValue = 0;
-    assert.equal(actualValue, expectedValue);
-  });
-
-  test('returns zero when both operands are negative values', () => {
-    // Arrange
-    const operandA = -1;
-    const operandB = -2;
-
-    // Action
-    const actualValue = sum(operandA, operandB);
-
-    // Assert
-    const expectedValue = 0;
-    assert.equal(actualValue, expectedValue);
+  test('returns zero if any operand is negative', () => {
+    // Test that the function returns zero if any operand is negative
+    assert.equal(sum(-1, 5), 0);
+    assert.equal(sum(1, -2), 0);
+    assert.equal(sum(-1, -2), 0);
   });
 
   test('returns zero if any operand is not a number', () => {
-    // Arrange
-    const operandA = 'a';
-    const operandB = 5;
-
-    // Action
-    const actualValue = sum(operandA, operandB);
-
-    // Assert
-    const expectedValue = 0;
-    assert.equal(actualValue, expectedValue);
-  });
-
-  test('returns zero when both operands are non-numeric', () => {
-    // Arrange
-    const operandA = 'a';
-    const operandB = 'b';
-
-    // Action
-    const actualValue = sum(operandA, operandB);
-
-    // Assert
-    const expectedValue = 0;
-    assert.equal(actualValue, expectedValue);
+    // Test that the function returns zero if any operand is not a number
+    assert.equal(sum('a', 5), 0);
+    assert.equal(sum('a', 'b'), 0);
   });
 
   test('correctly returns the sum when one operand is zero', () => {
-    // Arrange
-    const operandA = 0;
-    const operandB = 5;
-
-    // Action
-    const actualValue = sum(operandA, operandB);
-
-    // Assert
-    const expectedValue = 5;
-    assert.equal(actualValue, expectedValue);
-  });
-
-  test('returns zero when both operands are zero', () => {
-    // Arrange
-    const operandA = 0;
-    const operandB = 0;
-
-    // Action
-    const actualValue = sum(operandA, operandB);
-
-    // Assert
-    const expectedValue = 0;
-    assert.equal(actualValue, expectedValue);
+    // Test that the function correctly sums when one operand is zero
+    assert.equal(sum(0, 5), 5);
+    assert.equal(sum(0, 0), 0);
   });
 });
