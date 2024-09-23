@@ -9,14 +9,14 @@ let orders = [];
 // TODO: selesaikan fungsi addOrder
 function addOrder(customerName, items) {
   const totalPrice = items.reduce((total, item) => total + item.price, 0);
-  const newOrder = {
+  const orderEntry = {
     id: generateUniqueId(),
     customerName,
     items,
     totalPrice,
     status: 'Menunggu',
   };
-  orders.push(newOrder);
+  orders.push(orderEntry);
 }
 
 // TODO: selesaikan fungsi updateOrderStatus
