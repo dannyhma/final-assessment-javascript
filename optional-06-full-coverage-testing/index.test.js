@@ -1,9 +1,9 @@
-import { describe, test } from 'node:test';
+import {describe, test} from 'node:test';
 import assert from 'node:assert';
 import sum from './index.js';
 
 describe('Calculator', () => {
-  test('should sum correctly for positive numbers', () => {
+  test('correctly calculates the sum of two positive integers', () => {
     // Arrange
     const operandA = 2;
     const operandB = 3;
@@ -16,7 +16,7 @@ describe('Calculator', () => {
     assert.equal(actualValue, expectedValue);
   });
 
-  test('should return 0 when one of the operands is negative', () => {
+  test('returns zero if one operand is negative', () => {
     // Arrange
     const operandA = -1;
     const operandB = 5;
@@ -29,7 +29,7 @@ describe('Calculator', () => {
     assert.equal(actualValue, expectedValue);
   });
 
-  test('should return 0 when both operands are negative', () => {
+  test('returns zero when both operands are negative values', () => {
     // Arrange
     const operandA = -1;
     const operandB = -2;
@@ -42,7 +42,7 @@ describe('Calculator', () => {
     assert.equal(actualValue, expectedValue);
   });
 
-  test('should return 0 when one of the operands is not a number', () => {
+  test('returns zero if any operand is not a number', () => {
     // Arrange
     const operandA = 'a';
     const operandB = 5;
@@ -55,7 +55,7 @@ describe('Calculator', () => {
     assert.equal(actualValue, expectedValue);
   });
 
-  test('should return 0 when both operands are not numbers', () => {
+  test('returns zero when both operands are non-numeric', () => {
     // Arrange
     const operandA = 'a';
     const operandB = 'b';
@@ -68,7 +68,7 @@ describe('Calculator', () => {
     assert.equal(actualValue, expectedValue);
   });
 
-  test('should return the correct sum when one operand is zero', () => {
+  test('correctly returns the sum when one operand is zero', () => {
     // Arrange
     const operandA = 0;
     const operandB = 5;
@@ -81,7 +81,7 @@ describe('Calculator', () => {
     assert.equal(actualValue, expectedValue);
   });
 
-  test('should return 0 when both operands are zero', () => {
+  test('returns zero when both operands are zero', () => {
     // Arrange
     const operandA = 0;
     const operandB = 0;
